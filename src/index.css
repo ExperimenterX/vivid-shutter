@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+button {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700; /* Gold hover color */
+}
