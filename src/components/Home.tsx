@@ -1,15 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import backgroundImage from "../assets/pic1.jpg";
+import { NavLink } from "react-router-dom";
+import backgroundImage from "../assets/Mpic1.jpg";
 import "./Home.css"; // Import the CSS file
+import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 const Home: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleButtonClick = () => {
-    navigate("/contact"); // Navigate to the Contact page
-  };
+  const whatsappNumber = "+1234567890"; // Replace with your WhatsApp number
 
   return (
     <motion.div
@@ -24,35 +21,67 @@ const Home: React.FC = () => {
       {/* Header Section */}
       <header className="header">
         <nav className="nav">
-          <a href="#about" className="nav-link">
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
+          >
             About
-          </a>
-          <a href="#portfolio" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
+          >
             Portfolio
-          </a>
-          <a href="#services" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
+          >
             Services
-          </a>
-          <a href="#contact" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
+          >
             Contact
-          </a>
+          </NavLink>
         </nav>
       </header>
 
       {/* Main Content */}
       <div className="main-content">
         <h1 className="title">Capture Your Moments</h1>
-        <h2 className="subtitle">Transforming Moments into Timeless Memories.</h2>
+        <h2 className="subtitle">
+          Transforming Moments into Timeless Memories.
+        </h2>
       </div>
 
       {/* Book Now Button */}
       <motion.button
         className="book-now-button"
         whileHover={{ scale: 1.1 }}
-        onClick={handleButtonClick}
+        onClick={() => (window.location.href = "/contact")}
       >
         Book Now
       </motion.button>
+
+      {/* WhatsApp Floating Icon */}
+      <a
+        href={`https://wa.me/${whatsappNumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-icon"
+      >
+        <FaWhatsapp />
+      </a>
     </motion.div>
   );
 };

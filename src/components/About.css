@@ -1,0 +1,122 @@
+/* General Layout */
+.about-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  color: #333;
+  overflow: hidden;
+}
+
+.about-header {
+  width: 100%;
+  padding: 2rem;
+  background-image: url('../assets/pic3.jpg'); /* Background for header */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about-quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Content Section */
+.about-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6a11cb #ffecd2;
+}
+
+.about-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.about-content::-webkit-scrollbar-thumb {
+  background: #6a11cb;
+  border-radius: 10px;
+}
+
+.about-motivation {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-image: url('../assets/pic1.jpg'); /* Background for motivation */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-journey {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-image: url('../assets/pic1.jpg'); /* Background for journey */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-motivation h2,
+.about-journey h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffecd2;
+}
+
+.about-motivation p,
+.about-journey p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Highlighted Text */
+.about-highlight {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-quote {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+  }
+
+  .about-motivation h2,
+  .about-journey h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-motivation p,
+  .about-journey p {
+    font-size: 1rem;
+  }
+}

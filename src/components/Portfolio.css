@@ -1,0 +1,111 @@
+/* General Styles */
+.portfolio-container {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Photo Grid Styles */
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.photo-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Photo Card */
+.photo-card {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.modal-prev,
+.modal-next {
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  background-color: #333;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
