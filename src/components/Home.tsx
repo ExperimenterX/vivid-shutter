@@ -6,7 +6,7 @@ import "./Home.css"; // Import the CSS file
 import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 const Home: React.FC = () => {
-  const whatsappNumber = "+1234567890"; // Replace with your WhatsApp number
+  const whatsappNumber = "+917899587092"; // Replace with your WhatsApp number
 
   return (
     <motion.div
